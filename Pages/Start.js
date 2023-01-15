@@ -1,7 +1,7 @@
 import * as React from "react"
 import { StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
 
-const Start = () => {
+const Start = ({goToPage}) => {
     return (
         <View style={styles.container}>
             <View style={styles.fillerContainer}></View>
@@ -18,7 +18,11 @@ const Start = () => {
                 </View>
             </View>
             <View style={styles.buttonContainer}>
-                <TouchableHighlight style={styles.button}>
+                <TouchableHighlight 
+                  style={styles.button}
+                  onPress={()=>goToPage(1)}
+                  underlayColor="#F56A4D"
+                >
                     <Text style={styles.buttonTitle}>SHOP NOW</Text>
                 </TouchableHighlight>
             </View>
